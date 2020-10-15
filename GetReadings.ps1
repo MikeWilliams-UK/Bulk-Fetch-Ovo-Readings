@@ -21,6 +21,7 @@ for ($y=2017; $y -le 2020; $y++)
 
             Write-Host "Fetching readings for period $($startString) to $($endString)"
             Start-Process -Wait -NoNewWindow -FilePath ".\OvoData.exe" -ArgumentList "-u your.login@yourdomain.co.uk -p yourPassword -f $($startString) -t $($endString) -o .\OvoData-$($outputFile)"
+            Sleep -Seconds 15
         }
         else
         {
